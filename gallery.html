@@ -9,17 +9,22 @@
 <body>
 
 <section class="gallery-page">
-  <h2 class="gallery-title">Moments I Hold Close</h2>
+  <h2 class="gallery-title">Something I Keep Close 🤍</h2>
 
-  <div class="gallery-grid">
-    <img src="images/img1.jpg" class="gallery-img" onclick="openPopup(this)">
-    <img src="images/img2.jpg" class="gallery-img" onclick="openPopup(this)">
-  </div>
+  <!-- BUTTON -->
+  <button class="sparkle-btn" onclick="openMemories()">
+    Open Our Memories ✨
+  </button>
 </section>
 
 <!-- POPUP -->
-<div class="popup" id="popup" onclick="closePopup()">
-  <img id="popup-img">
+<div class="memory-popup" id="memoryPopup">
+  <div class="memory-box">
+    <span class="close-btn" onclick="closeMemories()">×</span>
+
+    <img src="images/img1.jpg">
+    <img src="images/img2.jpg">
+  </div>
 </div>
 
 <script src="js/gallery.js"></script>
