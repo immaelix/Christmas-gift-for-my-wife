@@ -247,3 +247,114 @@ body {
     width: 180px;
   }
 }
+/* =========================
+   SPARKLE BUTTON
+========================= */
+.sparkle-btn {
+  padding: 18px 45px;
+  font-size: 1.2rem;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f4d58d, #fff1c1);
+  color: #6b1b1b;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  animation: glow 2.5s infinite ease-in-out;
+}
+
+/* Sparkle Effect */
+.sparkle-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 60%);
+  opacity: 0;
+  animation: sparkle 3s infinite;
+}
+
+/* =========================
+   MEMORY POPUP
+========================= */
+.memory-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 999;
+}
+
+.memory-popup.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* POPUP BOX */
+.memory-box {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: zoomIn 0.6s ease;
+  position: relative;
+}
+
+/* IMAGES */
+.memory-box img {
+  width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease;
+}
+
+.memory-box img:hover {
+  transform: scale(1.08);
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #f4d58d;
+  color: #6b1b1b;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(244,213,141,0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(244,213,141,0.9);
+  }
+}
+
+@keyframes sparkle {
+  0% { opacity: 0; transform: rotate(0deg); }
+  50% { opacity: 0.6; }
+  100% { opacity: 0; transform: rotate(360deg); }
+}
