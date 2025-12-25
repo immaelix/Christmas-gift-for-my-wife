@@ -358,3 +358,60 @@ body {
   50% { opacity: 0.6; }
   100% { opacity: 0; transform: rotate(360deg); }
 }
+/* =========================
+   OLD PAPER NOTES
+========================= */
+.paper {
+  background: linear-gradient(135deg, #f7ecd2, #efe1c6);
+  color: #4b2e1e;
+  max-width: 750px;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow:
+    inset 0 0 40px rgba(0,0,0,0.15),
+    0 25px 60px rgba(0,0,0,0.35);
+  font-family: 'Playfair Display', serif;
+  animation: paperFade 2s ease;
+}
+
+.paper-title {
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.paper-text {
+  font-size: 1.2rem;
+  line-height: 2.3rem;
+  white-space: pre-line;
+}
+
+/* Notes Page Layout */
+.notes-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+}
+
+/* Buttons below paper */
+.notes-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Paper animation */
+@keyframes paperFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
