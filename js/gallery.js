@@ -1,11 +1,9 @@
-const popup = document.getElementById("popup");
-const popupImg = document.getElementById("popup-img");
+const popup = document.getElementById("memoryPopup");
 
-function openPopup(img) {
-  popupImg.src = img.src;
+function openMemories() {
   popup.classList.add("show");
 }
 
-function closePopup() {
+function closeMemories() {
   popup.classList.remove("show");
 }
