@@ -415,3 +415,69 @@ body {
     transform: translateY(0) scale(1);
   }
 }
+/* =========================
+   LETTER PAGE LAYOUT
+========================= */
+.parchment-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 60px 20px;
+}
+
+/* Candle container */
+.candle-wrapper {
+  height: 140px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Candle */
+.candle {
+  position: relative;
+  width: 60px;
+  height: 120px;
+}
+
+/* Wax */
+.wax {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 90px;
+  background: linear-gradient(#f5f1e6, #e8dcc4);
+  border-radius: 10px;
+}
+
+/* Wick */
+.wick {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 2px;
+  height: 15px;
+  background: #2b2b2b;
+  transform: translateX(-50%);
+}
+
+/* Flame */
+.flame {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  width: 22px;
+  height: 32px;
+  background: radial-gradient(circle at 50% 60%, #fff6d5 0%, #ffb347 45%, #ff8c00 75%);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: flicker 0.15s infinite alternate;
+}
+
+/* Flicker */
+@keyframes flicker {
+  from { transform: translateX(-50%) scale(1) rotate(-1deg); }
+  to   { transform: translateX(-50%) scale(1.05) rotate(1deg); }
+}
