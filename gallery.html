@@ -8,21 +8,21 @@
 
 <body>
 
-<nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="notes.html">Notes</a>
-  <a href="surprise.html">Forever</a>
-</nav>
+<section class="gallery-page">
+  <h2 class="gallery-title">Moments I Hold Close</h2>
 
-<section class="gallery">
-  <h2>Moments That Stay</h2>
-
-  <div class="images">
-    <img src="images/img1.jpg">
-    <img src="images/img2.jpg">
+  <div class="gallery-grid">
+    <img src="images/img1.jpg" class="gallery-img" onclick="openPopup(this)">
+    <img src="images/img2.jpg" class="gallery-img" onclick="openPopup(this)">
   </div>
 </section>
 
+<!-- POPUP -->
+<div class="popup" id="popup" onclick="closePopup()">
+  <img id="popup-img">
+</div>
+
+<script src="js/gallery.js"></script>
 <script src="js/snow.js"></script>
 </body>
 </html>
